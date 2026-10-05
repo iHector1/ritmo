@@ -72,6 +72,23 @@
         "videoUrl": {
           "type": "string",
           "pattern": "^https://(www\\.)?(youtube\\.com/watch\\?v=|youtu\\.be/)[\\w-]{11}$"
+        },
+        "tracking": {
+          "enum": [
+            "weighted",
+            "bodyweight",
+            "cardio",
+            "mobility"
+          ]
+        },
+        "metric": {
+          "enum": [
+            "reps",
+            "time",
+            "distance",
+            "calories",
+            "mixed"
+          ]
         }
       }
     },
