@@ -19,6 +19,7 @@ export function metricType(e:Exercise):Metric {
  if(e.metric)return e.metric;
  const t=e.target.toLowerCase();
  if(/\+|\//.test(t))return 'mixed';
+ if(/reps|saltos/.test(t))return 'reps';
  if(/cal/.test(t))return 'calories';
  if(/\bmin\b|\bs\b/.test(t))return 'time';
  if(/\bm\b/.test(t))return 'distance';

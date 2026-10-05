@@ -740,7 +740,7 @@
               "target": "10 reps cada 20 cal",
               "sets": 1,
               "tracking": "bodyweight",
-              "metric": "calories"
+              "metric": "reps"
             }
           ]
         }
