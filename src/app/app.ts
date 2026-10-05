@@ -4,7 +4,7 @@ import { DatePipe } from '@angular/common';
 import { SwUpdate } from '@angular/service-worker';
 import { Subscription } from 'rxjs';
 import { DomSanitizer } from '@angular/platform-browser';
-import { Block, Day, Exercise, Routine, Session, localDate, validateRoutine, validateSession, trackingType, metricType, upgradeSession } from './models';
+import { Block, Day, Exercise, Routine, Session, localDate, validateRoutine, validateSession, trackingType, metricType, upgradeSession, removeSession } from './models';
 import catalog from './exercise-catalog.json';
 const STORAGE='ritmo:v1';
 type Theme='system'|'light'|'dark';
@@ -13,6 +13,7 @@ interface InstallPrompt extends Event { prompt():Promise<void>; userChoice:Promi
 export class App implements OnDestroy {
  routine=signal<Routine|null>(null); view=signal<'train'|'history'|'settings'>('train'); selected=''; date=localDate();
  sessions=signal<Session[]>([]); drafts:Record<string,Session>={}; current!:Session;
+ celebration=signal<Session|null>(null); pendingDelete=signal<Session|null>(null);
  notice=signal(''); loading=signal(true); media=signal<Exercise|null>(null); seconds=signal(0); running=signal(false); timerLabel=signal('Descanso');
  theme=signal<Theme>('system'); dark=signal(false); online=signal(navigator.onLine); installAvailable=signal(false); installed=signal(false); updateAvailable=signal(false); timerOpen=signal(false);
  private installPrompt?:InstallPrompt;
@@ -63,8 +64,11 @@ export class App implements OnDestroy {
  openSession(){const p=this.routine()!;const key=`${p.id}:${this.date}:${this.selected}`;this.current=this.drafts[key]?upgradeSession(this.drafts[key]):{key,date:this.date,routineId:p.id,routineName:p.name,day:structuredClone(this.day),logs:Object.fromEntries(this.day.blocks.flatMap(b=>b.exercises.map(e=>[e.id,Array.from({length:e.sets},()=>({weight:'',unit:'kg' as const,actual:'',done:false}))]))),results:{},notes:''};this.drafts[key]=this.current;}
  save(){try{localStorage.setItem(STORAGE,JSON.stringify({version:1,routine:this.routine(),sessions:this.sessions(),drafts:this.drafts}));}catch{this.notice.set('No se pudo guardar en este navegador. Exporta un respaldo para conservar tus cambios.');}}
  update(){this.drafts[this.current.key]=this.current;this.save();}
- toggle(e:Exercise,index:number){const log=this.current.logs[e.id][index];log.done=!log.done;this.update();}
- finish(){if(!this.done){this.notice.set('Marca al menos una serie antes de guardar la sesión.');return;}const completed=structuredClone(this.current);completed.finishedAt=new Date().toISOString();this.sessions.update(s=>[completed,...s.filter(x=>x.key!==completed.key)]);this.save();this.notice.set(this.done===this.total?'Sesión completa. Bien hecho.':'Sesión parcial guardada. Puedes continuarla cuando quieras.');this.stop();}
+ toggle(e:Exercise,index:number){const log=this.current.logs[e.id][index];log.done=!log.done;this.update();if(this.done===this.total)this.finish();}
+ finish(){if(!this.done){this.notice.set('Marca al menos una serie antes de guardar la sesión.');return;}const completed=structuredClone(this.current);completed.finishedAt=new Date().toISOString();this.sessions.update(s=>[completed,...s.filter(x=>x.key!==completed.key)]);this.save();if(this.done===this.total){this.notice.set('');this.celebration.set(completed);this.timerOpen.set(false);setTimeout(()=>document.querySelector<HTMLButtonElement>('.celebration .primary')?.focus(),0);}else this.notice.set('Sesión parcial guardada. Puedes continuarla cuando quieras.');this.stop();}
+ deleteSession(){const session=this.pendingDelete();if(!session)return;const removed=removeSession(this.sessions(),this.drafts,session.key);this.sessions.set(removed.sessions);this.drafts=removed.drafts;if(this.current?.key===session.key){this.stop();this.timerOpen.set(false);this.seconds.set(0);this.openSession();}this.pendingDelete.set(null);this.celebration.set(null);this.save();this.notice.set('Sesión eliminada. Ese entrenamiento quedó limpio para volver a hacerlo.');}
+ closeCelebration(history=false){this.celebration.set(null);if(history)this.view.set('history');}
+
  previous(e:Exercise){const s=this.sessions().find(s=>s.date<this.date && s.logs[e.id]);return s?s.logs[e.id].filter(l=>l.done).map(l=>`${this.weighted(e)&&l.weight?l.weight+' '+l.unit+' · ':''}${l.actual||e.target}`).join(' / '):'';}
  preview(e:Exercise){this.guideTrigger=document.activeElement as HTMLElement;this.media.set(e);setTimeout(()=>document.querySelector<HTMLButtonElement>('.modal .close')?.focus(),0);}
  closeMedia(){this.media.set(null);this.guideTrigger?.focus();}

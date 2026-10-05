@@ -63,3 +63,8 @@ export function validateSession(value:unknown):Session {
  if(s.finishedAt!==undefined&&(typeof s.finishedAt!=='string'||Number.isNaN(Date.parse(s.finishedAt))))throw Error('Fecha inválida.');
  return s;
 }
+
+export function removeSession(sessions:Session[], drafts:Record<string,Session>, key:string){
+ const remainingDrafts={...drafts};delete remainingDrafts[key];
+ return {sessions:sessions.filter(s=>s.key!==key),drafts:remainingDrafts};
+}

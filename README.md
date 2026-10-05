@@ -10,6 +10,8 @@ Un diario de entrenamiento minimalista, mobile first y en español. Angular 22, 
 - Modos claro, oscuro y automático, con preferencia persistente. Navegación inferior y controles táctiles.
 - PWA instalable con service worker de Angular: interfaz, rutina y guías locales disponibles sin conexión después de la primera carga.
 - Activación, fuerza, AMRAP, metcon, core y finisher; resultados libres por bloque.
+- Pantalla de felicitación al marcar la última serie: guarda automáticamente la sesión completa.
+- Eliminar una sesión desde el historial limpia también su borrador. Si coincide con la sesión abierta, reinicia resultados, notas y progreso para repetirla.
 - Borradores por programa, fecha y día. Las sesiones parciales pueden continuarse.
 - Historial con una copia de la rutina de cada sesión, aunque después cambies de programa.
 - Último registro anterior del ejercicio, notas y temporizador de descanso / bloque.
