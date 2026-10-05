@@ -1,0 +1,614 @@
+{
+  "schemaVersion": 1,
+  "id": "octubre-2026",
+  "name": "Programa octubre",
+  "description": "Fuerza, acondicionamiento y constancia. Un entrenamiento a la vez.",
+  "days": [
+    {
+      "id": "lunes",
+      "label": "Lunes",
+      "weekday": 1,
+      "focus": "Pecho & hombros",
+      "blocks": [
+        {
+          "id": "lunes-b1",
+          "name": "Activación",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "lunes-b1-e1",
+              "name": "Bike",
+              "target": "10 min",
+              "sets": 1
+            },
+            {
+              "id": "lunes-b1-e2",
+              "name": "Saltos de cuerda",
+              "target": "150 saltos",
+              "sets": 1
+            },
+            {
+              "id": "lunes-b1-e3",
+              "name": "Shoulder taps",
+              "target": "20 reps",
+              "sets": 1
+            },
+            {
+              "id": "lunes-b1-e4",
+              "name": "Down up",
+              "target": "10 reps",
+              "sets": 1
+            },
+            {
+              "id": "lunes-b1-e5",
+              "name": "Push ups",
+              "target": "30 reps",
+              "sets": 1,
+              "catalogId": "Pushups"
+            }
+          ]
+        },
+        {
+          "id": "lunes-b2",
+          "name": "Fuerza",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "lunes-b2-e1",
+              "name": "Bench press · banco plano",
+              "target": "8 reps",
+              "sets": 4,
+              "catalogId": "Barbell_Bench_Press_-_Medium_Grip"
+            },
+            {
+              "id": "lunes-b2-e2",
+              "name": "Peck deck",
+              "target": "12 reps",
+              "sets": 4
+            },
+            {
+              "id": "lunes-b2-e3",
+              "name": "Bench press inclinado · máquina",
+              "target": "6 reps",
+              "sets": 3
+            },
+            {
+              "id": "lunes-b2-e4",
+              "name": "Press Z · dual KB",
+              "target": "10 reps",
+              "sets": 4
+            },
+            {
+              "id": "lunes-b2-e5",
+              "name": "Lateral raises",
+              "target": "12 reps",
+              "sets": 3,
+              "catalogId": "Side_Lateral_Raise"
+            },
+            {
+              "id": "lunes-b2-e6",
+              "name": "Soga extension",
+              "target": "15 reps",
+              "sets": 4,
+              "catalogId": "Triceps_Pushdown_-_Rope_Attachment"
+            }
+          ]
+        },
+        {
+          "id": "lunes-b3",
+          "name": "Workout",
+          "notes": "5 rondas. Marca cada movimiento al terminar las cinco rondas.",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "lunes-b3-e1",
+              "name": "Run",
+              "target": "200 m",
+              "sets": 1
+            },
+            {
+              "id": "lunes-b3-e2",
+              "name": "Dual DB hang clean and press",
+              "target": "10 reps",
+              "sets": 1
+            },
+            {
+              "id": "lunes-b3-e3",
+              "name": "MB slam",
+              "target": "10 reps",
+              "sets": 1
+            },
+            {
+              "id": "lunes-b3-e4",
+              "name": "Burpees",
+              "target": "10 reps",
+              "sets": 1
+            },
+            {
+              "id": "lunes-b3-e5",
+              "name": "Sit ups",
+              "target": "10 reps",
+              "sets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "martes",
+      "label": "Martes",
+      "weekday": 2,
+      "focus": "Pierna & core",
+      "blocks": [
+        {
+          "id": "martes-b1",
+          "name": "Activación",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "martes-b1-e1",
+              "name": "Rotaciones 90/90",
+              "target": "20 reps",
+              "sets": 1
+            },
+            {
+              "id": "martes-b1-e2",
+              "name": "Bootraper squats",
+              "target": "15 reps",
+              "sets": 1
+            },
+            {
+              "id": "martes-b1-e3",
+              "name": "Lunges estáticos alternados",
+              "target": "12 reps",
+              "sets": 1
+            },
+            {
+              "id": "martes-b1-e4",
+              "name": "Rings Cossack squats",
+              "target": "10 reps",
+              "sets": 1
+            }
+          ]
+        },
+        {
+          "id": "martes-b2",
+          "name": "Fuerza",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "martes-b2-e1",
+              "name": "Back squat",
+              "target": "12 reps",
+              "sets": 5,
+              "catalogId": "Barbell_Full_Squat",
+              "notes": "Carga del programa: #115. Unidad pendiente de confirmar."
+            },
+            {
+              "id": "martes-b2-e2",
+              "name": "Leg extension",
+              "target": "15 reps",
+              "sets": 4,
+              "catalogId": "Leg_Extensions"
+            },
+            {
+              "id": "martes-b2-e3",
+              "name": "Walking lunge + box jump",
+              "target": "20 m + 10 BJ",
+              "sets": 4
+            },
+            {
+              "id": "martes-b2-e4",
+              "name": "Lateral walk",
+              "target": "12 m",
+              "sets": 3,
+              "notes": "Plate + band"
+            }
+          ]
+        },
+        {
+          "id": "martes-b3",
+          "name": "Workout",
+          "notes": "AMRAP 12 min. Registra las rondas en el resultado del bloque.",
+          "timerSeconds": 720,
+          "exercises": [
+            {
+              "id": "martes-b3-e1",
+              "name": "Row",
+              "target": "150 m",
+              "sets": 1
+            },
+            {
+              "id": "martes-b3-e2",
+              "name": "MB thrusters",
+              "target": "15 reps",
+              "sets": 1
+            },
+            {
+              "id": "martes-b3-e3",
+              "name": "Half burpee to plate",
+              "target": "10 reps",
+              "sets": 1
+            }
+          ]
+        },
+        {
+          "id": "martes-b4",
+          "name": "Core",
+          "notes": "3 rondas.",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "martes-b4-e1",
+              "name": "Knee to chest",
+              "target": "20 reps",
+              "sets": 1
+            },
+            {
+              "id": "martes-b4-e2",
+              "name": "Roll out",
+              "target": "20 reps",
+              "sets": 1,
+              "catalogId": "Ab_Roller"
+            },
+            {
+              "id": "martes-b4-e3",
+              "name": "Plank",
+              "target": "30 s",
+              "sets": 1,
+              "catalogId": "Plank"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "miercoles",
+      "label": "Miércoles",
+      "weekday": 3,
+      "focus": "Espalda & bíceps",
+      "blocks": [
+        {
+          "id": "miercoles-b1",
+          "name": "Activación",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "miercoles-b1-e1",
+              "name": "Dead hang",
+              "target": "20 s",
+              "sets": 1
+            },
+            {
+              "id": "miercoles-b1-e2",
+              "name": "Swimmers",
+              "target": "10 reps",
+              "sets": 1
+            },
+            {
+              "id": "miercoles-b1-e3",
+              "name": "T, Y, W",
+              "target": "10 reps",
+              "sets": 1
+            }
+          ]
+        },
+        {
+          "id": "miercoles-b2",
+          "name": "Aproximaciones",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "miercoles-b2-e1",
+              "name": "Australian pull up",
+              "target": "30 reps",
+              "sets": 1
+            }
+          ]
+        },
+        {
+          "id": "miercoles-b3",
+          "name": "Fuerza",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "miercoles-b3-e1",
+              "name": "Pull down · polea",
+              "target": "12 reps",
+              "sets": 4
+            },
+            {
+              "id": "miercoles-b3-e2",
+              "name": "Row KB",
+              "target": "8 / 8 reps",
+              "sets": 4
+            },
+            {
+              "id": "miercoles-b3-e3",
+              "name": "Pull over · soga",
+              "target": "15 reps",
+              "sets": 3,
+              "notes": "Extender lento"
+            },
+            {
+              "id": "miercoles-b3-e4",
+              "name": "Hammers curl",
+              "target": "10 reps",
+              "sets": 4,
+              "catalogId": "Hammer_Curls"
+            },
+            {
+              "id": "miercoles-b3-e5",
+              "name": "Predicador · máquina",
+              "target": "12 reps",
+              "sets": 3,
+              "catalogId": "Machine_Preacher_Curls"
+            },
+            {
+              "id": "miercoles-b3-e6",
+              "name": "Australian hold",
+              "target": "20 s",
+              "sets": 3
+            }
+          ]
+        },
+        {
+          "id": "miercoles-b4",
+          "name": "Workout",
+          "notes": "AMRAP 20 min. Registra las rondas en el resultado del bloque.",
+          "timerSeconds": 1200,
+          "exercises": [
+            {
+              "id": "miercoles-b4-e1",
+              "name": "Single unders",
+              "target": "50 saltos",
+              "sets": 1
+            },
+            {
+              "id": "miercoles-b4-e2",
+              "name": "Gorilla rows",
+              "target": "20 reps",
+              "sets": 1
+            },
+            {
+              "id": "miercoles-b4-e3",
+              "name": "American swing",
+              "target": "20 reps",
+              "sets": 1
+            },
+            {
+              "id": "miercoles-b4-e4",
+              "name": "Farmer hold",
+              "target": "20 s",
+              "sets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "jueves",
+      "label": "Jueves",
+      "weekday": 4,
+      "focus": "Motor & resistencia",
+      "blocks": [
+        {
+          "id": "jueves-b1",
+          "name": "Activación",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "jueves-b1-e1",
+              "name": "Bike",
+              "target": "10 min",
+              "sets": 1
+            },
+            {
+              "id": "jueves-b1-e2",
+              "name": "Trote suave",
+              "target": "10 min",
+              "sets": 1
+            },
+            {
+              "id": "jueves-b1-e3",
+              "name": "Row",
+              "target": "1,000 m",
+              "sets": 1
+            }
+          ]
+        },
+        {
+          "id": "jueves-b2",
+          "name": "Metcon workout",
+          "notes": "En este orden.",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "jueves-b2-e1",
+              "name": "Run · primera parte",
+              "target": "5 min",
+              "sets": 1
+            },
+            {
+              "id": "jueves-b2-e2",
+              "name": "Push up · primera parte",
+              "target": "20 reps",
+              "sets": 1,
+              "catalogId": "Pushups"
+            },
+            {
+              "id": "jueves-b2-e3",
+              "name": "Run · segunda parte",
+              "target": "4 min",
+              "sets": 1
+            },
+            {
+              "id": "jueves-b2-e4",
+              "name": "Push up · segunda parte",
+              "target": "20 reps",
+              "sets": 1,
+              "catalogId": "Pushups"
+            },
+            {
+              "id": "jueves-b2-e5",
+              "name": "Run · tercera parte",
+              "target": "3 min",
+              "sets": 1
+            },
+            {
+              "id": "jueves-b2-e6",
+              "name": "Push up · tercera parte",
+              "target": "20 reps",
+              "sets": 1,
+              "catalogId": "Pushups"
+            },
+            {
+              "id": "jueves-b2-e7",
+              "name": "Run · cuarta parte",
+              "target": "2 min",
+              "sets": 1
+            },
+            {
+              "id": "jueves-b2-e8",
+              "name": "Push up · cuarta parte",
+              "target": "20 reps",
+              "sets": 1,
+              "catalogId": "Pushups"
+            }
+          ]
+        },
+        {
+          "id": "jueves-b3",
+          "name": "Finisher",
+          "notes": "Tabata 30 × 10. El PDF no indica cuántas rondas: confirmar con tu entrenador.",
+          "timerSeconds": 30,
+          "exercises": [
+            {
+              "id": "jueves-b3-e1",
+              "name": "Plank",
+              "target": "30 s trabajo / 10 s descanso",
+              "sets": 1,
+              "catalogId": "Plank"
+            },
+            {
+              "id": "jueves-b3-e2",
+              "name": "Russian twist",
+              "target": "30 s trabajo / 10 s descanso",
+              "sets": 1,
+              "catalogId": "Russian_Twist"
+            },
+            {
+              "id": "jueves-b3-e3",
+              "name": "Plate crunch",
+              "target": "30 s trabajo / 10 s descanso",
+              "sets": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "viernes",
+      "label": "Viernes",
+      "weekday": 5,
+      "focus": "Cadena posterior",
+      "blocks": [
+        {
+          "id": "viernes-b1",
+          "name": "Activación",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "viernes-b1-e1",
+              "name": "Rotaciones 90/90",
+              "target": "20 reps",
+              "sets": 1
+            },
+            {
+              "id": "viernes-b1-e2",
+              "name": "Glute bridge",
+              "target": "20 reps",
+              "sets": 1
+            },
+            {
+              "id": "viernes-b1-e3",
+              "name": "Rings reverse lunge",
+              "target": "20 reps",
+              "sets": 1
+            },
+            {
+              "id": "viernes-b1-e4",
+              "name": "Saltos de cuerda",
+              "target": "150 saltos",
+              "sets": 1
+            }
+          ]
+        },
+        {
+          "id": "viernes-b2",
+          "name": "Fuerza",
+          "notes": "",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "viernes-b2-e1",
+              "name": "Hip thrust · barra",
+              "target": "15 reps",
+              "sets": 4,
+              "catalogId": "Barbell_Hip_Thrust"
+            },
+            {
+              "id": "viernes-b2-e2",
+              "name": "Bulgarian squat",
+              "target": "10 / 10 reps",
+              "sets": 4
+            },
+            {
+              "id": "viernes-b2-e3",
+              "name": "Deadlift · dual DB",
+              "target": "8 reps",
+              "sets": 3,
+              "notes": "Carga del programa: #45. Unidad pendiente de confirmar."
+            },
+            {
+              "id": "viernes-b2-e4",
+              "name": "Hamstring curl",
+              "target": "12 reps",
+              "sets": 3,
+              "catalogId": "Lying_Leg_Curls"
+            }
+          ]
+        },
+        {
+          "id": "viernes-b3",
+          "name": "Workout",
+          "notes": "Cada 20 cal: 10 squat jumps.",
+          "timerSeconds": 0,
+          "exercises": [
+            {
+              "id": "viernes-b3-e1",
+              "name": "Bike",
+              "target": "100 cal",
+              "sets": 1
+            },
+            {
+              "id": "viernes-b3-e2",
+              "name": "Squat jump",
+              "target": "10 reps cada 20 cal",
+              "sets": 1
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
